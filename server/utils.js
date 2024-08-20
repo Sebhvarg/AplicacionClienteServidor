@@ -1,41 +1,41 @@
-function simulateTransmission(data) {
-    const segments = segmentData(data);
-    return segments.map(segment => applyRandomErrors(segment));
+function simularTransmision(data) {
+    const segmentos = dataSegmentada(data);
+    return segmentos.map(segmento => applicarErroresRandom(segmento));
 }
 
-function segmentData(data) {
-    const segmentSize = 50;  // Ejemplo de tamaño de segmento
-    const segments = [];
+function dataSegmentada(data) {
+    const tamanioSegmento = 50;  // Ejemplo de tamaño de segmento
+    const segmentos = [];
 
-    for (let i = 0; i < data.length; i += segmentSize) {
-        const segmentData = data.slice(i, i + segmentSize);
-        segments.push({ sequence: i / segmentSize, data: segmentData });
+    for (let i = 0; i < data.length; i += tamanioSegmento) {
+        const dataSegmentada = data.slice(i, i + tamanioSegmento);
+        segmentso.push({ sequence: i / tamanioSegmento, data: dataSegmentada });
     }
 
-    return segments;
+    return segmentos;
 }
 
-function applyRandomErrors(segment) {
+function applicarErroresRandom(segmento) {
     // Simulación de pérdida de paquetes (20% de probabilidad)
     if (Math.random() < 0.2) {
-        return { ...segment, missing: true };
+        return { ...segmento, missing: true };
     }
 
     // Simulación de cambio de bits (10% de probabilidad)
     if (Math.random() < 0.1) {
-        const corruptedData = segment.data.split('').map(char => {
+        const dataCorrompida = segmento.data.split('').map(char => {
             if (Math.random() < 0.05) {
                 return String.fromCharCode(char.charCodeAt(0) + 1);  // Modificación simple
             }
             return char;
         }).join('');
-        return { ...segment, data: corruptedData, error: true };
+        return { ...segmentp, data: dataCorrompida, error: true };
     }
 
     // Simulación de envío fuera de orden
-    segment.sequence += Math.random() < 0.3 ? (Math.random() < 0.5 ? -1 : 1) : 0;
+    segmento.sequence += Math.random() < 0.3 ? (Math.random() < 0.5 ? -1 : 1) : 0;
 
-    return segment;
+    return segmento;
 }
 
-module.exports = { simulateTransmission };
+module.exports = { simularTransmision };
