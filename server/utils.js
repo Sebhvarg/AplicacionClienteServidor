@@ -9,7 +9,7 @@ function dataSegmentada(data) {
 
     for (let i = 0; i < data.length; i += tamanioSegmento) {
         const dataSegmentada = data.slice(i, i + tamanioSegmento);
-        segmentso.push({ sequence: i / tamanioSegmento, data: dataSegmentada });
+        segmentos.push({ sequence: i / tamanioSegmento, data: dataSegmentada });
     }
 
     return segmentos;
