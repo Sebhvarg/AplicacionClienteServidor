@@ -1,5 +1,5 @@
-document.getElementById('sendButton').addEventListener('click', async () => {
-    const fileInput = document.getElementById('fileInput');
+document.getElementById('btnEnviar').addEventListener('click', async () => {
+    const fileInput = document.getElementById('inputArchivo');
     if (fileInput.files.length === 0) {
         alert("Selecciona un archivo primero.");
         return;
