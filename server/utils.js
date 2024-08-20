@@ -18,6 +18,7 @@ function dataSegmentada(data) {
 function applicarErroresRandom(segmento) {
     // Simulación de pérdida de paquetes (60% de probabilidad)
     if (Math.random() < 0.6) {
+        segmento.data = '';
         console.log("El archivo sufrió pérdida de paquetes");
         return { ...segmento, missing: true };
     }
@@ -47,7 +48,7 @@ function applicarErroresRandom(segmento) {
         return { ...segmento, data: dataCorrompida, error: true };
     }
 
-    // Simulación de envío fuera de orden (60 % de probabilidad)
+    // Simulación de envío fuera de orden (60 % de)
     if (Math.random() < 0.6) {
         if (Math.random() < 0.5) {
             segmento.sequence -= 1;
