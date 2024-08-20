@@ -1,30 +1,43 @@
+const crypto = require('crypto');
+
+// Calcular Checksum
+function calcularChecksum(data) {
+    var checkS = crypto.createHash('md5').update(data).digest('hex');
+    console.log("Checksum: " + checkS);
+    return checkS;
+}
+
 function simularTransmision(data) {
     const segmentos = dataSegmentada(data);
     return segmentos.map(segmento => applicarErroresRandom(segmento));
 }
 
 function dataSegmentada(data) {
-    const tamanioSegmento = 50;  // Ejemplo de tamaño de segmento
+    const tamanioSegmento = 50;  
     const segmentos = [];
 
     for (let i = 0; i < data.length; i += tamanioSegmento) {
         const dataSegmentada = data.slice(i, i + tamanioSegmento);
-        segmentos.push({ sequence: i / tamanioSegmento, data: dataSegmentada });
+        const checksum = calcularChecksum(dataSegmentada);
+        segmentos.push({ sequence: i / tamanioSegmento, data: dataSegmentada, checksum });
     }
 
     return segmentos;
 }
 
 function applicarErroresRandom(segmento) {
-    // Simulación de pérdida de paquetes (60% de probabilidad)
-    if (Math.random() < 0.6) {
+ 
+    // Simulación de pérdida de paquetes (30% de probabilidad)
+    if (Math.random() < 0.1) {
+        console.log("La data perdida es:" + segmento.data);
         segmento.data = '';
         console.log("El archivo sufrió pérdida de paquetes");
         return { ...segmento, missing: true };
     }
 
-    // Simulación de cambio de bits (70% de probabilidad)
-    if (Math.random() < 0.7) {
+    // Simulación de cambio de bits (20% de probabilidad)
+    if (Math.random() < 0.1) {
+        console.log("La data con cambio de bits fue:" + segmento.data);
         const dataCorrompida = segmento.data.split('').map(char => {
             if (Math.random() < 0.08) {
                 const alterationType = Math.random();
@@ -44,12 +57,16 @@ function applicarErroresRandom(segmento) {
             }
             return char;
         }).join('');
+        const nuevoChecksum = calcularChecksum(dataCorrompida);
+        console.log("Nuevo checksum: " + nuevoChecksum);
         console.log("El archivo sufrió cambio de bits");
-        return { ...segmento, data: dataCorrompida, error: true };
+        return { ...segmento, data: dataCorrompida, checksum: nuevoChecksum, error: true };
     }
 
-    // Simulación de envío fuera de orden (60 % de)
-    if (Math.random() < 0.6) {
+    
+    // Simulación de envío fuera de orden (20 % de probabilidad)
+    if (Math.random() < 0.8) {
+        console.log("La data con envío fuera de orden:" + segmento.data);
         if (Math.random() < 0.5) {
             segmento.sequence -= 1;
         } else {
@@ -58,7 +75,6 @@ function applicarErroresRandom(segmento) {
         console.log("El archivo sufrió envío fuera de orden");
     }
     
-
     return segmento;
 }
 
