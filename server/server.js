@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
-const { simulateTransmission } = require('./utils');
+const { simularTransmision } = require('./utils');
 
 const app = express();
 
@@ -13,10 +13,10 @@ app.use(bodyParser.json());
 app.post('/upload', (req, res) => {
     const { data } = req.body;
 
-    const segments = simulateTransmission(data);
+    const segmentos = simularTransmision(data);
 
-    const orderedData = segments.sort((a, b) => a.sequence - b.sequence)
-                                .map(segment => segment.data)
+    const dataOrdenada = segmentos.sort((a, b) => a.sequence - b.sequence)
+                                .map(segmento => segmento.data)
                                 .join('');
 
     const dir = path.join(__dirname, 'archivos');
@@ -24,13 +24,13 @@ app.post('/upload', (req, res) => {
         fs.mkdirSync(dir, { recursive: true });
     }
 
-    const filePath = path.join(dir, 'data1.txt');
-    fs.writeFileSync(filePath, orderedData);
+    const rutaArchivo = path.join(dir, 'data1.txt');
+    fs.writeFileSync(rutaArchivo, dataOrdenada);
 
-    const hasError = segments.some(segment => segment.error);
-    const missingSegments = segments.filter(segment => segment.missing).length;
+    const tieneError = segmentos.some(segmento => segmento.error);
+    const faltaSegmentos = segmentos.filter(segmento => segmento.missing).length;
 
-    if (hasError || missingSegments > 0) {
+    if (tieneError || faltaSegmentos > 0) {
         res.json({ message: 'Archivo recibido con errores o segmentos faltantes.' });
     } else {
         res.json({ message: 'Archivo recibido correctamente.' });
