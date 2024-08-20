@@ -16,24 +16,47 @@ function dataSegmentada(data) {
 }
 
 function applicarErroresRandom(segmento) {
-    // Simulación de pérdida de paquetes (20% de probabilidad)
-    if (Math.random() < 0.2) {
+    // Simulación de pérdida de paquetes (60% de probabilidad)
+    if (Math.random() < 0.6) {
+        console.log("El archivo sufrió pérdida de paquetes");
         return { ...segmento, missing: true };
     }
 
-    // Simulación de cambio de bits (10% de probabilidad)
-    if (Math.random() < 0.1) {
+    // Simulación de cambio de bits (70% de probabilidad)
+    if (Math.random() < 0.7) {
         const dataCorrompida = segmento.data.split('').map(char => {
-            if (Math.random() < 0.05) {
-                return String.fromCharCode(char.charCodeAt(0) + 1);  // Modificación simple
+            if (Math.random() < 0.08) {
+                const alterationType = Math.random();
+                if (alterationType < 0.4) {
+                    
+                    return String.fromCharCode(Math.floor(Math.random() * 94) + 32);
+                } else if (alterationType < 0.7) {
+                    
+                    if (/[a-zA-Z]/.test(char)) {
+                        return char === char.toLowerCase() ? char.toUpperCase() : char.toLowerCase();
+                    }
+                } else {
+                    
+                    return String.fromCharCode(char.charCodeAt(0) + (Math.random() < 0.5 ? -1 : 1));
+                }
+
             }
             return char;
         }).join('');
-        return { ...segmentp, data: dataCorrompida, error: true };
+        console.log("El archivo sufrió cambio de bits");
+        return { ...segmento, data: dataCorrompida, error: true };
     }
 
-    // Simulación de envío fuera de orden
-    segmento.sequence += Math.random() < 0.3 ? (Math.random() < 0.5 ? -1 : 1) : 0;
+    // Simulación de envío fuera de orden (60 % de probabilidad)
+    if (Math.random() < 0.6) {
+        if (Math.random() < 0.5) {
+            segmento.sequence -= 1;
+        } else {
+            segmento.sequence += 1;
+        }
+        console.log("El archivo sufrió envío fuera de orden");
+    }
+    
 
     return segmento;
 }
