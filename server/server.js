@@ -38,6 +38,7 @@ app.post('/upload', (req, res) => {
         res.json({ message: 'Archivo recibido correctamente.' });
     }
 });
+
 // Función para obtener la IP del servidor
 function obtenerIP() {
     const interfaces = os.networkInterfaces();
