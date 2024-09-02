@@ -10,6 +10,18 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+// servir el archivo
+
+app.get('/descargar', (req, res) => {
+    const rutaArchivo = path.join(__dirname, 'archivos', 'data1.txt');
+    if (fs.existsSync(rutaArchivo)) {
+        res.download(rutaArchivo);
+    } else {
+        res.json({ message: 'El archivo no existe' });
+    }
+}
+);
+
 
 app.post('/upload', (req, res) => {
     const { data } = req.body;

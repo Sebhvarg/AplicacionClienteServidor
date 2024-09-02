@@ -19,3 +19,15 @@ document.getElementById('btnEnviar').addEventListener('click', async () => {
     const result = await response.json();
     alert(result.message);
 });
+document.getElementById('btnDescargar').addEventListener('click', async () => {
+    const response = await fetch('http://localhost:3000/descargar');
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'data1.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+);
+

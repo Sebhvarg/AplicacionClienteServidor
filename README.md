@@ -30,7 +30,7 @@ Para poder ejecutar el servidor es necesario tener instalado `node.js`
 <hr />
 
 ## Procedimiento
-1. Ejecutar en la consola el servidor con el comando `npm .\server.js` desde la carpeta server
+1. Ejecutar en la consola el servidor con el comando `node .\server.js` desde la carpeta server
 
    1.1. En la consola debe aparecer `Servidor escuchando en el puerto 3000`
 2. Abrir el archivo `index.html` desde la carpeta client

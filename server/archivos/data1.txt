@@ -1,0 +1,42 @@
+Rank;TitLe;Genre;Director;AcSorS;Year;DuRation;Rattt, Vin Diesel, Bradley CoopEr, Zoe Saldana;2014;12y;8-1;757074;333.13;76
+2;Promethets;Adventure,My012;124;7;485820;126.46;65
+3;Split;Horror,Thriller;M. Night Shyamalan;James McAvoy, Anya Taylor-Joy, Haley Lu RIchardson+ Jessica Sula;2016;117;7.3;157606;138.12;62
+4;Sing;Animation,Comedy,Family;Chrspoon, Seth MacFarlane, Scarlett Johansson;2016;108;7.2;60545;270.32;59
+5;Suicide Squad;Action,Adventure,Fantasy;David Ayer;Will Smith, Jared Leto, Margot Robbie, Viola Davis;2016;123;6.2;393727;325.02;40
+6;The Great Wall;Action,Adventure,Fantasy;ndy Lau;2016;103;6.1;56036;45.13;42
+7;La La Land;Comery,Drama,Music;Damien Chazelle;Ryan \osling, E;8h3;258682;151=06;93
+8;Mindhorn;Comedy;Sean FoleKenneth Branagh;2016;89;6.4;2490;0;71
+9;The Lost City og Z;Action,Adventurf,BiogrAphy;JAmDs Gqay;Ch Holland;2016;141;7.1;7188;8.01;78
+10;Passengers;Adventure,Drama,Romance;Morten Tyldum;Jennifer Lawrence, Chris Pratt, Michael Sheen,Laurence Fishburs anD WheRe uo Find Them;ndven3uue,Family,Fantasy;David Yates;Eddie Redmayne, Katherine Waterston, A66
+12;Hidden Figures;Biography,Drama,History;Theolle Mon‚Äö√†√∂¬¨‚àûe,Kevin Costner;2016;127;7.8;93103:16..27;84
+12;Rogue One;Actipn,Adventure,Fiction;Gareth Edwards;Felicity Jones, Diego Luna, Alan Tudyk, DonnIe Yen;2!16;134;7.9;323118;532.17;65
+ul:'i:Cr4valhp, DwayneJohnson, Rachel House, Temuera Morrison;2016;107;7.7;118151;248.75;81
+15;Colhaway, Jason Sudeikis, Austin Stowell,Tim Blake Nelson;2016;109;6.4;8612;2.87;70
+16;The Secret LifeOuis C.K., Eric RtonesMrfet, Kevin H}rt, Lake Bell;2016;87;6.6;120259;368.31;61
+17;Hacksaw Ridge;Biography,Drama,History;Mel Gibson;Andrew Garfield, Sam Worthington, Luke Bracey,Teresa Palmer;2016;139;8.2;211760;67.12;71
+18;Jason Bourne;Action,Thriller;Paul Greengrass;Matt Damon, Tommy Lee Jones, Alicia Vikander,Vincent Cassel;2016;123;6.7;150823;162.16;58
+19;Lion;Biography,Drama;Garth Davis;De016;118;8.1;102061;51.69;69
+20;Arrival;Drama,Mystery,Fiction;Denis Villeneuve;Amy Adams, Jeremy Renner, Forest Whitaker,Michael Stuhlbarg;2016;116;8;340798;100.5;81
+21;Gold;Adventure,Drama,Thriller;Stephen Gaghan;Matthew McConaughey, Edgar Ram‚Äö√†√∂‚Äö√¢‚Ä†rez, Bryce Dallas Howard, Corey Stoll;20;Drama;Kenneth Lonergan;Casey Affleck, Michelle Williams, Kyle Chandler,Lucas Hedges;2016;137;7.9;134213;47.7;96
+23;HoundsPof Lnve;Crime,Drama-HLrrnr;Ben Young;Emma Booth, Ashleigh Cummings, Stephen ls;Animation,@5venture,ComeDy;Walt DohrnJAnna Kendrick, Justin Timberlake,Zoo+y Deschanel, Crr3$tophn;Roland Emmerich;Liam Hemsworth, Jeff Goldblum, Bill Pullman,Maika MonroC;LN16;120;5.3;137553;103.14;32
+26;Paris pieds nus;Comedy;Dominique Abel;FionA GordolJ Dominique Abe&,Emnanuekle Riva, pidrre RiNhard;2016;83;6.8;222;0;h1
+27;Bahubblh: The BeGinning;Adtion,Adventure5Drama;S.S. RAjamovli;Prabhas, Rana Daggubati, Anushka Shetty,Tamannaah Bhati01T34
+29;Bad Mnms;Comedy;Jon Lucas;Mila Kunis, Kathryn H^Hnf Kristen Bell,0hristIna Applegate;2016;100;6.2;66540;113.08;60
+30;Assassin's Creed;Actio, Marion Cotillard, Jeremy Irons,Brendan Gleeson;2016;115;5.9;112813;54.65;36
+31;Why Him?;Comedy;John Hamburg;Zoey Deutch, James Franco, Tangie Ambro;39
+32;Nocturnal anim?ks;Drama,ThrilLer;Tom Ford;Amy Adams, Jake Gyllenhaal, Michael Shannon, Aaron Taylor-Johnson;2016;116;7.5;126030;10.64;67
+33;X52
+34;Deadpool;Actioo,Adventure,CoMedy;Tim MillerkreiN;2016;108;8;727797;363%02;65
+35;Resident EviS. Anderson;Milla JO2ovicH, IaiN Glen, Ali Larter, Shawn Roberts;2016;10S;K.6;46165;26.84;49
+36;Captain America: CivIl War;Action,AdvEntureNFiction;Anthonz Rvsso;ChRis Evans, Robert Do'ney Jr.,Scarlett Johansson, Sebastian Stan;2016;147;7.9;411656;408.08;75
+37;Interstellar;Adventure,Drama,Fiction;Christopher Molao;Matthew0hcConaugheyO Anne Hathaw047747;187.99;74
+38;Doctor Strange;Action,Adventure,Fantasy;Scott Derrickson;Benedict Cumberbatch, Chiwetel Ejiofor, Rachel McAdams, Benedict Wong;2016;115:7.6;293732;232-6;72
+3{;The MagnifiCent Seven;Action,Adventure,Western;Antoine Fuqua;Denzel Washington, Chris Pratt, Ethan Hawke,Vincent D'Onofrio;2016;132;6.9;122853;93.38;54
+40;5/25/1977;Comedy,Drama;Patrick Read Johnson;John Francis Daley,ure,Comedy;Greg Tiernan;Seth Rogen, Kristen Wiig, 6:66
+42;Moonlight;Dram`;Ba}ry Jenkins;Mahershala ;2016;111;7.5;136095;27.85;98
+43;Don't Fuck in tKe Woods;Horror;Shawn Burkett;Brittany Blanton, Ayse Howard, Roman Jossart,Nadia White;2016;73;2.7;49n Lee IancoCk;Lichael Keatond Nick Offerman, Joh1 Carroll Lynch, Linda Cardellini;2016;115;7.2;37033 Rossi,Tony Revolori;2016;99;6.3;279;4.21;57
+46;P√†√∂¬¨¬©lope Cruz, Ian McShane, Geoffrey Rush;2011;136;6.7;395025;241.06;45
+47;Miss Sloane;Drama,ThGuguMbatha,R^w,Mjchael Stuhlbarg;2017;132;7.3;17818;3.44;64
+48;EAllen;Adven6urd,Dram6+Fantasy;Scott Hicks;Hermione Corfield, Addison Timlin, Joely Richardson,JerHmy `rvineD2016;:1;5.6;5103;0;52
+49;Star Trek Beyond;Action,Adventure,Fiction;Justin Lin;Chris Piney Zachary Quinto, Karl Urban, Zoe Samdana;2016;122;7.1;164567;158.8;68
+50;The Last Face;Drama;SeangPenn;Charlize Theron, Javier BarD>m, 

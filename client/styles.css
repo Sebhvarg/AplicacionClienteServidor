@@ -18,7 +18,7 @@ input, button {
     border-radius: 5px 5px 5px 5px;
 }
 
-input, button ::hover {
+input, button :hover {
     background-color: #f4f4f4;
     cursor: pointer;
     font-weight: bold;
