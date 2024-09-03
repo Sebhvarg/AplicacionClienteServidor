@@ -39,7 +39,7 @@ function dataSegmentada(data) {
 function applicarErroresRandom(segmento) {
     
     // Simulación de pérdida de paquetes (30% de probabilidad)
-    if (Math.random() < 0.35) {
+    if (Math.random() < 0) {
         console.log("La data perdida es:" + segmento.data);
         segmento.data = '';
         cantbitsperdidos++;
@@ -50,7 +50,7 @@ function applicarErroresRandom(segmento) {
     }
 
     // Simulación de cambio de bits (20% de probabilidad)
-    if (Math.random() < 0.35) {
+    if (Math.random() < 0) {
         console.log("La data con cambio de bits fue:" + segmento.data);
         const dataCorrompida = segmento.data.split('').map(char => {
             if (Math.random() < 0.08) {
@@ -80,19 +80,26 @@ function applicarErroresRandom(segmento) {
     }
 
     
-    // Simulación de envío fuera de orden (20 % de probabilidad)
-    if (Math.random() < 0.35) {
-        console.log("La data con envío fuera de orden:" + segmento.data);
-        if (Math.random() < 0.5) {
-            segmento.sequence -= 1;
-        } else {
-            segmento.sequence += 1;
-        }
-        console.log("El archivo sufrió envío fuera de orden");
-        cantenviofueraorden++;
-        console.log("Cantidad de envíos fuera de orden: " + cantenviofueraorden);   
+   // Simulación de envío fuera de orden (20 % de probabilidad)
+if (Math.random() < 0.2) {
+    // Aumentamos la cantidad de envíos fuera de orden desde el principio
+    cantenviofueraorden++;
+    console.log("Cantidad de envíos fuera de orden: " + cantenviofueraorden);   
+   
+    // Decide si alterar la secuencia
+    if (Math.random() < 0.5) {
+        segmento.sequence -= 1;
+        segmento.sequence = segmento.sequence < 0 ? 0 : segmento.sequence;
+    } else {
+        segmento.sequence += 1;
+        segmento.sequence = segmento.sequence > 100 ? 100 : segmento.sequence;
     }
-    
+
+    // Mostrar el cambio en la secuencia
+    console.log("La data con envío fuera de orden: " + segmento.data);
+    console.log("El archivo sufrió envío fuera de orden");
+}
+
     
     return segmento;
 }
