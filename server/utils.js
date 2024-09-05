@@ -12,6 +12,7 @@ function calcularChecksum(data) {
        
     return checkS;
 }
+
     var cantbitsperdidos =0;
     var cantbitscorruptos =0;
     var cantenviofueraorden =0;
@@ -20,7 +21,6 @@ function simularTransmision(data) {
     const segmentos = dataSegmentada(data);
     
     return segmentos.map(segmento => applicarErroresRandom(segmento));
-
 }
 
 function dataSegmentada(data) {
@@ -38,8 +38,8 @@ function dataSegmentada(data) {
 
 function applicarErroresRandom(segmento) {
     
-    // Simulación de pérdida de paquetes (30% de probabilidad)
-    if (Math.random() < 0) {
+    // Simulación de pérdida de paquetes (35% de probabilidad)
+    if (Math.random() < 0.35) {
         console.log("La data perdida es:" + segmento.data);
         segmento.data = '';
         cantbitsperdidos++;
@@ -49,8 +49,8 @@ function applicarErroresRandom(segmento) {
     
     }
 
-    // Simulación de cambio de bits (20% de probabilidad)
-    if (Math.random() < 0) {
+    // Simulación de cambio de bits (35% de probabilidad)
+    if (Math.random() < 0.35) {
         console.log("La data con cambio de bits fue:" + segmento.data);
         const dataCorrompida = segmento.data.split('').map(char => {
             if (Math.random() < 0.08) {
@@ -80,14 +80,14 @@ function applicarErroresRandom(segmento) {
     }
 
     
-   // Simulación de envío fuera de orden (20 % de probabilidad)
-if (Math.random() < 0.2) {
+   // Simulación de envío fuera de orden (35 % de probabilidad)
+if (Math.random() < 0.35) {
     // Aumentamos la cantidad de envíos fuera de orden desde el principio
     cantenviofueraorden++;
     console.log("Cantidad de envíos fuera de orden: " + cantenviofueraorden);   
    
     // Decide si alterar la secuencia
-    if (Math.random() < 0.5) {
+    if (Math.random() < 1) {
         segmento.sequence -= 1;
         segmento.sequence = segmento.sequence < 0 ? 0 : segmento.sequence;
     } else {
@@ -100,9 +100,12 @@ if (Math.random() < 0.2) {
     console.log("El archivo sufrió envío fuera de orden");
 }
 
-    
+
     return segmento;
+
+
 }
+
 
 
 module.exports = { simularTransmision };

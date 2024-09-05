@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { simularTransmision } = require('./utils');
 const os = require('os');
+const { log } = require('console');
 
 const app = express();
 
@@ -23,7 +24,9 @@ app.get('/descargar', (req, res) => {
 );
 
 
+
 app.post('/upload', (req, res) => {
+    var tiempoInicio = new Date();
     const { data } = req.body;
 
     const segmentos = simularTransmision(data);
@@ -31,6 +34,7 @@ app.post('/upload', (req, res) => {
     const dataOrdenada = segmentos.sort((a, b) => a.sequence - b.sequence)
                                 .map(segmento => segmento.data)
                                 .join('');
+
 
     // Crear directorio si no existe
     const dir = path.join(__dirname, 'archivos');
@@ -49,6 +53,14 @@ app.post('/upload', (req, res) => {
     } else {
         res.json({ message: 'Archivo recibido correctamente.' });
     }
+
+    
+    // Tiempo de carga del archivo
+    const tiempoFin = new Date();
+    console.log("------------------------------------------------------------------------------");
+    console.log(`Tiempo de carga del archivo: ${tiempoFin - tiempoInicio} ms`);
+    tiempoInicio = tiempoFin;
+
 });
 
 // Función para obtener la IP del servidor
@@ -64,8 +76,10 @@ function obtenerIP() {
     return 'No se pudo determinar la IP';
 }
 
+
 const puerto = 3000;
 app.listen(puerto, () => {
+    
     console.log(`Servidor escuchando en el puerto ${puerto}`);
     console.log(`IP del servidor: ${obtenerIP()}`);
 });
