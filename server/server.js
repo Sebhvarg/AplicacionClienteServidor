@@ -76,7 +76,7 @@ function obtenerIP() {
     return 'No se pudo determinar la IP';
 }
 
-
+// indicar si el servidor esta escuchando
 const puerto = 3000;
 app.listen(puerto, () => {
     
