@@ -37,8 +37,9 @@ Para poder ejecutar el servidor es necesario tener instalado `node.js`
 3. Dar click en el botón _Choose File_
 4. Seleccionar el archivo `.txt` a cargar
 5. Dar click en el botón _Enviar_
-6. Abrir el archivo `datos1.txt` en la carpeta server\archivos
-7. Revisar los cambios y errores de la consola
+6. Descargar el archivo en el botón _Descargar archivo_
+7. Guardar el archivo nuevo y revisarlo 
+8. Revisar los cambios y errores de la consola
 
 <hr />
 
