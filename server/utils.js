@@ -22,7 +22,7 @@ function simularTransmision(data) {
     
     return segmentos.map(segmento => applicarErroresRandom(segmento));
 }
-
+// segmentar data
 function dataSegmentada(data) {
     const tamanioSegmento = 50;  
     const segmentos = [];
